@@ -6,6 +6,7 @@
 $REPO_URL = "https://github.com/mlkgrnt/Cyber-Eros.skill.git"
 $SKILLS_DIR = "$env:USERPROFILE\.claude\skills"
 $SKILLS = @("cyber-eros", "director-engine", "lore-distiller", "memory-archiver", "world-weaver")
+$SHARED_DIRS = @("specs")
 $CLEANUP_DIR = $null
 
 Write-Host "=== Cyber-Eros.skill Installer ===" -ForegroundColor Cyan
@@ -79,6 +80,24 @@ foreach ($skill in $SKILLS) {
     Copy-Item -Path $src -Destination $SKILLS_DIR -Recurse -Force
     $installed++
     Write-Host "  INSTALLED: $skill" -ForegroundColor Green
+}
+
+# Copy shared directories (specs/)
+foreach ($shared in $SHARED_DIRS) {
+    $src = Join-Path $SOURCE_DIR $shared
+    $dst = Join-Path $SKILLS_DIR $shared
+
+    if (-not (Test-Path $src)) {
+        $errors += "  SKIPPED: shared '$shared' — source folder not found at $src"
+        continue
+    }
+
+    if (Test-Path $dst) {
+        Remove-Item -Path $dst -Recurse -Force
+    }
+
+    Copy-Item -Path $src -Destination $SKILLS_DIR -Recurse -Force
+    Write-Host "  INSTALLED: $shared (shared)" -ForegroundColor Green
 }
 
 # 清理临时目录

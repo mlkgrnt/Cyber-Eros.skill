@@ -9,6 +9,7 @@ set -euo pipefail
 REPO_URL="https://github.com/mlkgrnt/Cyber-Eros.skill.git"
 SKILLS_DIR="${HOME}/.claude/skills"
 SKILLS=("cyber-eros" "director-engine" "lore-distiller" "memory-archiver" "world-weaver")
+SHARED_DIRS=("specs")
 CLEANUP_DIR=""
 
 echo "=== Cyber-Eros.skill Installer ==="
@@ -74,6 +75,21 @@ for skill in "${SKILLS[@]}"; do
     cp -r "${src}" "${SKILLS_DIR}/"
     installed=$((installed + 1))
     echo "  INSTALLED: ${skill}"
+done
+
+# Copy shared directories (specs/)
+for shared in "${SHARED_DIRS[@]}"; do
+    src="${SOURCE_DIR}/${shared}"
+    dst="${SKILLS_DIR}/${shared}"
+
+    if [ ! -d "${src}" ]; then
+        errors+=("SKIPPED: shared '${shared}' — source folder not found at ${src}")
+        continue
+    fi
+
+    rm -rf "${dst}"
+    cp -r "${src}" "${SKILLS_DIR}/"
+    echo "  INSTALLED: ${shared} (shared)"
 done
 
 # 清理临时目录
