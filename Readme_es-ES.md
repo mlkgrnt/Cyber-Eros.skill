@@ -1,100 +1,87 @@
-# **💽 Ecosistema del Protocolo Cyber-Eros** 
+# **💽 Ecosistema del Protocolo Cyber-Eros**
 
-**Solución integral de juegos de rol (RP) de texto con inmersión profunda, impulsada por un director automatizado.**
+**Solución completa de roleplay de texto inmersivo automatizado impulsado por director.**
 
-## **🌟 Resumen del Proyecto**
+---
 
-**Cyber-Eros (v3.3.0)** es un **ecosistema de skills de Claude Code** — no es simplemente un prompt de juego de rol; es un **ecosistema narrativo** completo. Este proyecto ha sido diseñado mediante protocolos modulares para resolver los puntos críticos de los juegos de rol de larga duración: la tediosa importación de configuraciones, el estancamiento de la trama, la pérdida de memoria debido al límite de tokens y la dificultad para mantener un estilo de escritura coherente.
+## **🌟 Descripción del Proyecto**
 
-Desarrollado por **ClementineLam**, el proyecto soporta un ciclo cerrado que abarca desde la "creación de mundos desde cero" hasta la "destilación de textos largos" y la "gestión automatizada de conflictos". Cada módulo es un skill independiente de Claude Code con su propio `SKILL.md`.
+**Cyber-Eros (v3.5.0)** es un **ecosistema de habilidades para Claude Code** — más que solo un prompt de roleplay; es un **ecosistema narrativo** completo. Este proyecto utiliza diseño de protocolo modular para resolver los puntos débiles principales en el roleplay de texto a largo plazo: importación tediosa de configuraciones, estancamiento de la trama, desvanecimiento de la memoria a medida que aumentan los tokens, y la dificultad de mantener estilos de escritura consistentes.
 
-## **🏗️ Panorama del Ecosistema (Módulos)**
+---
 
-La familia Cyber-Eros incluye cinco protocolos principales que pueden funcionar de forma independiente o colaborar sin fisuras:
+## **🆕 Novedades en v3.5**
 
-| Nombre del Protocolo | Función Principal | Palabras Clave de Activación |
-| :---- | :---- | :---- |
-| **Cyber-Eros** | **\[Motor Central\]** Impulsa la máquina de estados y la pirámide sensorial; gestiona el ecosistema. | /eros, /ce |
-| **Lore-Distiller** | **\[Destilación de Lore\]** Extrae personajes, trama y estilo a partir de novelas o textos largos. | /distill, /蒸馏 |
-| **World-Weaver** | **\[Tejedor de Mundos\]** Genera un mundo original completo a partir de una semilla de inspiración. | /weave, /创世 |
-| **Director-Engine** | **\[Motor de Director\]** Monitoriza el estancamiento, inyecta variables y activa el modo infinito. | (llamar al director), (lanzar variable) |
-| **Memory-Archiver** | **\[Archivador de Memoria\]** Comprime el contexto en alta densidad para un "guardado/carga" perfecto. | /archive, /存档 |
+- **Condiciones de activación** — guía clara sobre cuándo usar cada habilidad
+- **16 ejemplos** — ejemplos detallados de entrada→salida para todos los escenarios
+- **Listas de verificación de calidad** — auto-verificación después de usar cada habilidad
+- **Manejo de errores** — recuperación elegante ante fallos comunes
+- **Historial de versiones** — seguimiento de cambios entre versiones
 
-## **🔥 Características Principales**
+---
 
-### **1\. 🎭 Mecanismo de Director Automatizado (Director-Driven)**
+## **🏗️ Descripción General del Ecosistema (Módulos)**
 
-Elimina la necesidad de que el usuario fuerce el avance de la trama. **Director-Engine** monitoriza la sesión en tiempo real:
+La familia Cyber-Eros consiste en cinco protocolos principales que pueden ejecutarse independientemente o colaborar sin problemas:
 
-* **Rompehielos (Deadlock Breaker)**: Si detecta estancamiento, activa cambios ambientales (cortes de luz, intrusos).  
-* **Acelerador de Trama (Plot Accelerator)**: Inyecta pistas críticas o crisis de tiempo cuando los personajes se sumergen demasiado en la intimidad.  
-* **Modo Infinito (Endless Mode)**: Tras resolver la trama principal, genera episodios cotidianos o nuevos desafíos de convivencia.
+| Nombre del Protocolo | Función Principal | Activación | Cuándo Usar |
+| :---- | :---- | :---- | :---- |
+| **Cyber-Eros** | **[Motor Principal]** Impulsa la máquina de estados y la pirámide sensorial; despacha el ecosistema. | /eros | Iniciar una sesión de RP |
+| **Lore-Distiller** | **[Destilación de Lore]** Extrae configuraciones, tramas y estilos de novelas o textos largos. | /distill | Extraer configuraciones de novelas |
+| **World-Weaver** | **[Tejido de Mundos]** Genera automáticamente una construcción de mundo original completa a partir de una semilla. | /weave | Crear configuraciones originales |
+| **Director-Engine** | **[Motor del Director]** Monitorea el estancamiento, inyecta variables e impulsa el modo sin fin. | (Auto-activado) | Cuando la trama se estanca |
+| **Memory-Archiver** | **[Archivado de Memoria]** Plegado de contexto de alta densidad para funcionalidad perfecta de guardar/cargar. | /archive | Guardar/cargar sesiones |
 
-### **2\. 🧪 Destilación y Montaje de Lore Extremo**
-
-Mediante **Lore-Distiller**, puedes "licuar" novelas de diez mil palabras en archivos estructurados .md y .json. El sistema no solo extrae datos rígidos, sino que clona las "características sintácticas" y las "preferencias sensoriales" de la obra original, eliminando la sensación de "IA genérica".
-
-### **3\. 🕸️ Apropiación del Entorno y Motor Sensorial**
-
-El motor central sigue la lógica de la **Pirámide Sensorial** (Auditivo-Visual-Táctil-Olfativo-Emocional) y obliga a la **"Apropiación del Entorno"**: cada descripción debe involucrar objetos del entorno (ej. paredes frías, sábanas arrugadas, sombras parpadeantes).
-
-### **4\. 💾 Guardado Continuo y Máquina de Estados**
-
-El **Memory-Archiver** integrado permite "reducir la dimensión" de los diálogos extensos. Registra el **Salto de Relación (Relationship Delta)** en lugar de repeticiones de diálogo, asegurando que incluso en una nueva sesión, la IA recuerde el apodo recién establecido o ese secreto no revelado.
+---
 
 ## **🚀 Inicio Rápido**
 
-### **Modo A: Desde Cero (Modo Original)**
+### **Instalación con un clic**
 
-1. Envía /weave para activar el Tejedor de Mundos.  
-2. Proporciona tus semillas de inspiración (ej: *"Cyberpunk \+ Rivales \+ Enemigos a amantes"*).  
-3. Tras confirmar los archivos de configuración, escribe /eros y selecciona el Modo \[1\].
-
-### **Modo B: Clonación de Almas (Modo Fandom)**
-
-1. Envía /distill y pega el texto de la obra original.  
-2. Selecciona las dimensiones de destilación para obtener los archivos de configuración.  
-3. Inicia una nueva sesión, entrega los archivos y escribe /eros para comenzar.
-
-## **📦 Instalación (Claude Code)**
-
-**Instalación con un clic (sin necesidad de clonar):**
-
-macOS / Linux:
 ```bash
-curl -fsSL https://raw.githubusercontent.com/mlkgrnt/Cyber-Eros.skill/main/install.sh | bash
-```
+# Linux / Mac
+bash <(curl -s https://raw.githubusercontent.com/mlkgrnt/Cyber-Eros.skill/main/install.sh)
 
-Windows (PowerShell):
-```powershell
+# Windows (PowerShell)
 irm https://raw.githubusercontent.com/mlkgrnt/Cyber-Eros.skill/main/install.ps1 | iex
 ```
 
-**O clonar y ejecutar localmente:**
+### **Instalación manual**
+
 ```bash
 git clone https://github.com/mlkgrnt/Cyber-Eros.skill.git
 cd Cyber-Eros.skill
-./install.sh        # macOS / Linux
-.\install.ps1       # Windows PowerShell
+./install.sh    # Linux / Mac
+.\install.ps1   # Windows
 ```
 
-Reinicie Claude Code. Cada skill (cyber-eros, lore-distiller, world-weaver, director-engine, memory-archiver) estará disponible como comando de barra.
+### **Uso**
 
-## **🛠️ Adaptación al Entorno**
+1. **Selecciona tu modo**: Comienza desde cero (`/weave`) o clona un alma (`/distill`)
+2. **Inicializa el motor**: Usa `/eros` para montar configuraciones e iniciar la sesión
+3. **Impulso narrativo**: El **Director-Engine** gestiona automáticamente el ritmo de la trama y el entorno
 
-Cyber-Eros tiene **capacidad de percepción del entorno**:
+---
 
-* **En entornos de Agentes (ej. Claude Code)**: El protocolo llama silenciosamente a herramientas de escritura de archivos para crear las carpetas distilled\_lore/ o save\_states/ localmente.  
-* **En ventanas de chat web estándar**: El protocolo genera bloques de código Markdown elegantes para que el usuario los guarde manualmente.
+## **🔒 Características de Seguridad**
 
-## **⚠️ Seguridad y Normas**
+- **Palabras de seguridad** — "停下", "退出", "pause", "stop" pausan inmediatamente la sesión
+- **Límites duros** — Los límites absolutos establecidos durante la configuración siempre se respetan
+- **Máquina de estados** — La progresión gradual previene escenarios forzados
+- **Soporte OOC** — El texto entre paréntesis/corchetes se trata como fuera de personaje
 
-* **Mecanismo de Palabras de Seguridad**: Soporta tres niveles: "Para/Stop", "Salir/Exit" y "Más despacio".  
-* **Aislamiento de Límites**: Prohibición absoluta de cruzar los hard\_limits definidos por el usuario.  
-* **Aislamiento OOC**: Todas las instrucciones del sistema y programaciones se realizan mediante ( ) o \[ \], asegurando la pureza de la narrativa.
+---
 
-**"En el desierto cibernético, la emoción es la única entidad."**
+## **🔗 Ver También**
 
-*— Protocolo Cyber-Eros v3.3*
+- [Learn-Language](https://github.com/mlkgrnt/Learn-Language) — Sistema interactivo de aprendizaje de idiomas del mismo autor
 
-© 2024 ClementineLam. Licenciado bajo el Tratado Interestelar Cyber-Eros.
+---
+
+## **⚖️ Licencia y Créditos**
+
+Desarrollado por **ClementineLam**.
+
+© 2024. Licenciado bajo el **Tratado Interestelar Cyber-Eros**.
+
+*"La línea entre fantasma y máquina se traza con palabras."*

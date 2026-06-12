@@ -2,99 +2,86 @@
 
 **Automated director-driven, deep immersion text roleplay (RP) full-stack solution.**
 
+---
+
 ## **🌟 Project Overview**
 
-**Cyber-Eros (v3.3.0)** is a **Claude Code skill ecosystem** — more than just a roleplay prompt; it is a complete **narrative ecosystem**. This project utilizes modular protocol design to solve core pain points in long-term text roleplay: tedious setting imports, plot stagnation, memory fading as tokens increase, and the difficulty of maintaining consistent writing styles.
+**Cyber-Eros (v3.5.0)** is a **Claude Code skill ecosystem** — more than just a roleplay prompt; it is a complete **narrative ecosystem**. This project utilizes modular protocol design to solve core pain points in long-term text roleplay: tedious setting imports, plot stagnation, memory fading as tokens increase, and the difficulty of maintaining consistent writing styles.
 
-Developed by **ClementineLam**, this project supports a full-cycle closed loop from "zero-cost world-building" to "long-text distillation" and "automated conflict management." Each module is packaged as an independent Claude Code skill with its own `SKILL.md`.
+---
+
+## **🆕 What's New in v3.5**
+
+- **Trigger conditions** — clear guidance on when to use each skill
+- **16 examples** — detailed input→output examples for all scenarios
+- **Quality checklists** — self-verification after each skill use
+- **Error handling** — graceful fallbacks for common failures
+- **Version history** — track changes across releases
+
+---
 
 ## **🏗️ Ecosystem Overview (Modules)**
 
 The Cyber-Eros family consists of five core protocols that can run independently or collaborate seamlessly:
 
-| Protocol Name | Core Function | Trigger Keywords |
-| :---- | :---- | :---- |
-| **Cyber-Eros** | **\[Core Engine\]** Drives the state machine and sensory pyramid; dispatches the ecosystem. | /eros, /ce |
-| **Lore-Distiller** | **\[Lore Distillation\]** Extracts settings, plots, and styles from novels or long texts. | /distill, /蒸馏 |
-| **World-Weaver** | **\[World Weaving\]** Automatically generates a complete original world-building from a seed. | /weave, /创世 |
-| **Director-Engine** | **\[Director Engine\]** Monitors stagnation, injects variables, and drives endless mode. | (Call Director), (Roll Variable) |
-| **Memory-Archiver** | **\[Memory Archiving\]** High-density context folding for perfect "save/load" functionality. | /archive, /存档 |
+| Protocol Name | Core Function | Trigger | When to Use |
+| :---- | :---- | :---- | :---- |
+| **Cyber-Eros** | **[Core Engine]** Drives the state machine and sensory pyramid; dispatches the ecosystem. | /eros | Starting an RP session |
+| **Lore-Distiller** | **[Lore Distillation]** Extracts settings, plots, and styles from novels or long texts. | /distill | Extracting settings from novels |
+| **World-Weaver** | **[World Weaving]** Automatically generates a complete original world-building from a seed. | /weave | Creating original settings |
+| **Director-Engine** | **[Director Engine]** Monitors stagnation, injects variables, and drives endless mode. | (Auto-triggered) | When plot stalls |
+| **Memory-Archiver** | **[Memory Archiving]** High-density context folding for perfect save/load functionality. | /archive | Saving/loading sessions |
 
-## **🔥 Core Features**
-
-### **1\. 🎭 Director-Driven Mechanism**
-
-Eliminate the need for users to manually push the plot. **Director-Engine** monitors the backend in real-time:
-
-* **Deadlock Breaker**: Automatically triggers environmental changes (e.g., power outages, pursuers) when stagnation is detected.  
-* **Plot Accelerator**: Drops fatal clues or time-sensitive crises when characters are too deeply immersed in intimacy.  
-* **Endless Mode**: Generates slice-of-life episodes or new challenges after the main plot is completed.
-
-### **2\. 🧪 Extreme Lore Distillation & Mounting**
-
-With **Lore-Distiller**, you can instantly "liquefy" 10,000-word novels into structured .md and .json files. The system captures not only hard data but also clones the "syntax features" and "sensory biases" of the original work, effectively removing the "AI feel."
-
-### **3\. 🕸️ Environmental Appropriation & Sensory Engine**
-
-The core engine follows a **Sensory Pyramid** logic (Auditory-Visual-Tactile-Olfactory-Emotional) and enforces "Environmental Appropriation"—every description must involve surrounding objects (e.g., cold walls, wrinkled sheets, flickering shadows).
-
-### **4\. 💾 Memory Compression & State Machine**
-
-The built-in **Memory-Archiver** can perform "dimensional reduction" on long conversations. It records "Relationship Deltas" rather than simple dialogue repetition, ensuring that even in a new session, the AI remembers your newly established nicknames or that unresolved secret.
+---
 
 ## **🚀 Quick Start**
 
-### **Mode A: From Scratch (Original Mode)**
+### **One-click install**
 
-1. Send /weave to launch the World-Weaver.  
-2. Provide your inspiration seeds (e.g., *"Cyberpunk \+ Rivalry \+ Enemies to Lovers"*).  
-3. After confirming the generated setting files, type /eros and select Mode \[1\] to mount the settings.
-
-### **Mode B: Soul Cloning (Fandom Mode)**
-
-1. Send /distill and paste the source text.  
-2. Select distillation dimensions to obtain the generated configuration files.  
-3. Start a new session, provide the files, and type /eros to launch.
-
-## **📦 Installation (Claude Code)**
-
-**One-click install (no clone needed):**
-
-macOS / Linux:
 ```bash
-curl -fsSL https://raw.githubusercontent.com/mlkgrnt/Cyber-Eros.skill/main/install.sh | bash
-```
+# Linux / Mac
+bash <(curl -s https://raw.githubusercontent.com/mlkgrnt/Cyber-Eros.skill/main/install.sh)
 
-Windows (PowerShell):
-```powershell
+# Windows (PowerShell)
 irm https://raw.githubusercontent.com/mlkgrnt/Cyber-Eros.skill/main/install.ps1 | iex
 ```
 
-**Or clone & run locally:**
+### **Manual install**
+
 ```bash
 git clone https://github.com/mlkgrnt/Cyber-Eros.skill.git
 cd Cyber-Eros.skill
-./install.sh        # macOS / Linux
-.\install.ps1       # Windows PowerShell
+./install.sh    # Linux / Mac
+.\install.ps1   # Windows
 ```
 
-Restart Claude Code afterward. Each skill (cyber-eros, lore-distiller, world-weaver, director-engine, memory-archiver) will be available as a slash command.
+### **Usage**
 
-## **🛠️ Environment Adaptation**
+1. **Select Your Mode**: Start from scratch (`/weave`) or clone a soul (`/distill`)
+2. **Initialize Engine**: Use `/eros` to mount settings and start the session
+3. **Narrative Drive**: The **Director-Engine** automatically manages plot pace and environment
 
-Cyber-Eros is **environment-aware**:
+---
 
-* **In Claude Code / Agent environments**: The protocols silently call Bash/File Write tools to create distilled\_lore/ or save\_states/ folders locally.  
-* **In standard Web chat windows**: The protocols output data in elegant Markdown code blocks for easy manual saving.
+## **🔒 Safety Features**
 
-## **⚠️ Safety & Norms**
+- **Safety words** — "停下", "退出", "pause", "stop" immediately pause the session
+- **Hard limits** — Absolute boundaries set during setup are always respected
+- **State machine** — Gradual progression prevents forced scenarios
+- **OOC support** — Parenthetical/bracketed text is treated as out-of-character
 
-* **Safety Word Mechanism**: Supports three levels of control: "Stop," "Exit," and "Slower."  
-* **Boundary Isolation**: Strictly prohibits crossing user-defined hard\_limits.  
-* **OOC Isolation**: All system commands and scheduling are handled via ( ) or \[ \], ensuring the purity and immersion of the main narrative text.
+---
 
-**"In the cyber wilderness, emotion is the only entity."**
+## **🔗 See Also**
 
-*— Cyber-Eros Protocol v3.3*
+- [Learn-Language](https://github.com/mlkgrnt/Learn-Language) — Interactive language learning system by the same author
 
-© 2024 ClementineLam. Licensed under the Cyber-Eros Interstellar Treaty.
+---
+
+## **⚖️ License & Credits**
+
+Developed by **ClementineLam**.
+
+© 2024. Licensed under the **Cyber-Eros Interstellar Treaty**.
+
+*"The boundary between ghost and machine is drawn with words."*
